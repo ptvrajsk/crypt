@@ -1,0 +1,30 @@
+@import '../../shared/style/fonts.scss';
+@import '../../shared/style/colours.scss';
+
+.title {
+    font-size: 250px;
+}
+
+.dark_generic_button {
+    color: $dark_white;
+    font-family: 'Inter';
+    background: $dark_base_lighter;
+    border-radius: 0.5em;
+    padding: 1rem 1rem;
+    width: 12vw;
+    border: 4px transparent;
+}
+
+// .dark_generic_button:hover{
+//     border-image-slice: 1;
+//     border-image-source: $dark_gradient_accent;
+//     transition: 0.5s;
+// }
+
+.dark_generic_button:hover {
+    background: $dark_base_lighter padding-box, $dark_gradient_accent border-box;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 0.5em;
+}
