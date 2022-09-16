@@ -1,0 +1,72 @@
+@import '../../style/colours.scss';
+
+.floating_input_container {
+  width: 100%;
+  z-index: 2;
+  max-height: 52px;
+  height: 6vw;
+  min-height: 45px;
+}
+
+.floating_label {
+  font-size: 18px;
+  position: relative;
+  left: 3%;
+  bottom: 77%;
+  transition: all 0.13s ease-in-out;
+  z-index: 1;
+  color: rgb(149, 149, 149);
+}
+
+.floating_label::before {
+  content: " ";
+  height: 50%;
+  background: #272530;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: -2px;
+  z-index: -1;
+}
+
+.floating_label::after {
+  content: " ";
+}
+
+.floating_label_input {
+  padding: 0px 4% 0px 4%;
+  width: 92%;
+  height: 100%;
+  border: 2px solid #2f2c45;
+  background: #272530;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s;
+  color: #fff;
+}
+
+.floating_label_input::placeholder {
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+  color: rgb(149, 149, 149);
+}
+
+.floating_label_input:focus {
+  border: 2px solid #0a9dec;
+}
+
+.floating_label_input:focus::placeholder {
+  opacity: 1;
+}
+
+.floating_label_input:focus + .floating_label {
+  bottom: 130%;
+  font-size: 15px;
+  color: #0a9dec;
+}
+
+.floating_label_input:not(:focus) + .floating_label.floating_label_when_input_filled {
+  opacity: 0;
+}
