@@ -1,0 +1,23 @@
+@import '../../shared/style/colours.scss';
+@import '../../shared/style/fonts.scss';
+
+.light {
+  width: 10rem;
+  height: 2.9rem;
+  border-radius: 7px;
+  background-color: $dark_white;
+  font-size: 20px;
+  font-family: 'Inter';
+  color: $dark_base_darker;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid $dark_base_darker;
+  &:hover {
+    background-color: $dark_base;
+    color: $dark_white;
+    border: 1px solid $dark_white;
+  }
+
+  &:active {
+    scale: 95%;
+  }
+}
