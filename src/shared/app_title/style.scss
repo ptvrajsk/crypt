@@ -1,6 +1,9 @@
 @import '/src/shared/style/fonts.scss';
-text {
+@import '/src/shared/style/colours.scss';
+.app_title {
     font-family: 'BungeeHairline';
+    color: $dark_white;
+    font-size: 4rem;
 }
 
 

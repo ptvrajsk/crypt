@@ -1,13 +1,15 @@
 import React from "react";
-import './style.scss';
+import "./app_button.scss";
 
-interface AppButtonProps {
-    text: string;
-    className: string;
-}
 
-export default function AppButton(props: AppButtonProps): JSX.Element {
-  return (
-    <button className={props.className}>{props.text}</button>
-  );
+export default function AppButton(props: {
+  text: string;
+  className?: string;
+  theme?: string;
+}): JSX.Element {
+
+
+
+
+  return <button className={"light"}>{props.text}</button>;
 }
